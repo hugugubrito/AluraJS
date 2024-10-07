@@ -23,20 +23,40 @@ passagemComprada = true;
 //----------------------------------------------------------------
 
 if (idadeComprador >= 18 && passagemComprada == true) {
-    console.log("Boa viagem");
+    console.log("Voce pode embarcar");
 } else {
     console.log("Voce não pode embarcar");
 }
 
 
 let contador = 0;
-let destinoExiste = "Destino indisponivel";
+let destinoExiste = false;
 while(contador < 4){
     if (listaDeDestinos[contador] == destino) {
-        destinoExiste = "destino disponivel";       
+        destinoExiste = true;       
         break;
     } 
     contador ++;
 } 
 console.log(destinoExiste);
  
+if (passagemComprada && destinoExiste) {
+    console.log("boa viagem");
+}else{
+    console.log("erro");
+}
+
+let a = 0;
+let b = 1;
+let c = a + b;
+let d = b + c;
+
+a = c;
+b = d;
+for (let i = 0; i <=25; i++ ){
+    console.log(a,b);
+    let c = a + b;
+    let d = b + c;  
+    a = c;
+    b = d;
+}
